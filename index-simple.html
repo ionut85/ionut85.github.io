@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ionut Ciobotaru - Product Dev passionate about technology, advertising, and entrepreneurship">
+    <title>Ionut Ciobotaru | Product Dev & Tech Entrepreneur</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-tertiary: #999999;
+            --border-radius: 16px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 1024px) {
+            .layout {
+                grid-template-columns: 320px 1fr;
+                gap: 48px;
+            }
+        }
+
+        /* Profile Sidebar */
+        .profile {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        @media (min-width: 1024px) {
+            .profile {
+                position: sticky;
+                top: 24px;
+            }
+        }
+
+        .profile__avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: block;
+            border: 4px solid var(--bg-color);
+            object-fit: cover;
+        }
+
+        .profile__name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .profile__bio {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            white-space: pre-line;
+        }
+
+        .profile__meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 16px;
+            border-top: 1px solid var(--bg-color);
+        }
+
+        .profile__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Content Area */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section__title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        /* Card Grid */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 640px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Card Base */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 16px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+            min-height: 100px;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Card Sizes */
+        .card--medium {
+            grid-column: span 1;
+        }
+
+        .card--large {
+            grid-column: span 1;
+        }
+
+        @media (min-width: 640px) {
+            .card--medium {
+                grid-column: span 2;
+            }
+
+            .card--large {
+                grid-column: span 2;
+            }
+        }
+
+        .card__title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .card__domain {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            font-weight: 400;
+            margin-top: auto;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="layout">
+            <!-- Profile Sidebar -->
+            <aside class="profile">
+                <img src="assets/images/profile.jpg" alt="Ionut Ciobotaru" class="profile__avatar">
+
+                <h1 class="profile__name">Ionut Ciobotaru</h1>
+
+                <p class="profile__bio">Passionate about technology and how it can improve lives.
+
+Over the past 15+ years, I've worked at the intersection of advertising, tech, and entrepreneurship.
+
+Currently learning and building next-gen marketing tools with GenAI.</p>
+
+                <div class="profile__meta">
+                    <div class="profile__meta-item">
+                        📍 <span>Berlin, DE</span>
+                    </div>
+                    <div class="profile__meta-item">
+                        💼 <span>Product Dev</span>
+                    </div>
+                    <div class="profile__meta-item">
+                        🌍 <span>from RO</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+
+                <!-- Section: Media -->
+                <section class="section">
+                    <h2 class="section__title">Media</h2>
+                    <div class="cards">
+                        <a href="https://news.id5.io/2023/04/14/the-marriage-to-idfa-is-over-shifting-identity-paradigms-in-the-mobile-environment-identity-2023/" class="card card--large" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">The Marriage to IDFA Is Over - Shifting Identity Paradigms - IDENTITY 2023</h3>
+                            <span class="card__domain">news.id5.io</span>
+                        </a>
+
+                        <a href="https://www.iabuk.com/member-content/how-gaming-can-unlock-true-omnichannel-advertising-success" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">How gaming can unlock true omnichannel advertising success</h3>
+                            <span class="card__domain">iabuk.com</span>
+                        </a>
+
+                        <a href="https://www.adexchanger.com/tv-and-video/why-gaming-should-be-on-every-advertisers-radar/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Why Gaming Should Be On Every Advertiser's Radar</h3>
+                            <span class="card__domain">adexchanger.com</span>
+                        </a>
+
+                        <a href="https://venturebeat.com/pc-gaming/verve-group-finds-new-ways-to-advertise-to-gamers/" class="card card--medium" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Verve Group Finds New Ways To Advertise To Gamers</h3>
+                            <span class="card__domain">venturebeat.com</span>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=jIjunGyyCo4" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Podcast: Privacy and Transparency in Digital Advertising</h3>
+                            <span class="card__domain">youtube.com</span>
+                        </a>
+
+                        <a href="https://www.slideshare.net/PubNative/deconstructing-the-inapp-bidding-landscape-white-paper" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Deconstructing the In-App Bidding Landscape</h3>
+                            <span class="card__domain">slideshare.net</span>
+                        </a>
+
+                        <a href="https://iabeurope.eu/programmatic-trends-buzzword-predictions-for-2023/" class="card card--medium" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Programmatic Trends & Buzzword Predictions for 2023</h3>
+                            <span class="card__domain">iabeurope.eu</span>
+                        </a>
+
+                        <a href="https://open.spotify.com/episode/3iQZOfAV7yc6zhkLTVMA9G?si=ywRz-N_nSyWx5zf1hOhjZg" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">INCRMNTAL Podcast: We're All Mad Here</h3>
+                            <span class="card__domain">spotify.com</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Events & Memberships -->
+                <section class="section">
+                    <h2 class="section__title">Events & Memberships</h2>
+                    <div class="cards">
+                        <a href="https://www.mmaglobal.com/speakers/ionut-ciobotaru" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">MMA Global Speaker</h3>
+                            <span class="card__domain">mmaglobal.com</span>
+                        </a>
+
+                        <a href="https://www.meetup.com/beers-adops-adtech-berlin/" class="card card--medium" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Beers, Ad Ops, & Ad Tech Berlin | Meetup</h3>
+                            <span class="card__domain">meetup.com</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/adtechcares/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">AdTech Cares</h3>
+                            <span class="card__domain">linkedin.com</span>
+                        </a>
+
+                        <a href="https://docs.prebid.org/dev-docs/bidders/pubnative.html" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Prebid.org - PubNative Bidder</h3>
+                            <span class="card__domain">prebid.org</span>
+                        </a>
+
+                        <a href="https://www.iab.com/news/native-predictions/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">IAB Native Predictions</h3>
+                            <span class="card__domain">iab.com</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Investments -->
+                <section class="section">
+                    <h2 class="section__title">Investments</h2>
+                    <div class="cards">
+                        <a href="https://www.incrmntal.com/" class="card card--large" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">INCRMNTAL</h3>
+                            <span class="card__domain">incrmntal.com</span>
+                        </a>
+
+                        <a href="https://numbereight.ai/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">NumberEight AI</h3>
+                            <span class="card__domain">numbereight.ai</span>
+                        </a>
+
+                        <a href="https://ioniq.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">IONIQ</h3>
+                            <span class="card__domain">ioniq.com</span>
+                        </a>
+
+                        <a href="https://mgi-se.com/" class="card card--large" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Verve Group (MGI)</h3>
+                            <span class="card__domain">mgi-se.com</span>
+                        </a>
+
+                        <a href="http://kayzen.io" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Kayzen</h3>
+                            <span class="card__domain">kayzen.io</span>
+                        </a>
+
+                        <a href="https://reflect.app/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Reflect</h3>
+                            <span class="card__domain">reflect.app</span>
+                        </a>
+
+                        <a href="https://www.facebook.com/takeatrip.band/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Take A Trip (Band)</h3>
+                            <span class="card__domain">facebook.com</span>
+                        </a>
+
+                        <a href="https://contextsdk.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Context SDK</h3>
+                            <span class="card__domain">contextsdk.com</span>
+                        </a>
+
+                        <a href="https://www.iion.io/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">iion</h3>
+                            <span class="card__domain">iion.io</span>
+                        </a>
+
+                        <a href="http://substack.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Substack</h3>
+                            <span class="card__domain">substack.com</span>
+                        </a>
+
+                        <a href="https://www.northdata.de/PubStation+GmbH,+Berlin/Amtsgericht+Charlottenburg+%28Berlin%29+HRB+166768+B" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">PubStation GmbH</h3>
+                            <span class="card__domain">northdata.de</span>
+                        </a>
+
+                        <a href="https://fi.co/mentors/7671" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Founder Institute Mentor</h3>
+                            <span class="card__domain">fi.co</span>
+                        </a>
+
+                        <a href="https://replit.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Replit</h3>
+                            <span class="card__domain">replit.com</span>
+                        </a>
+
+                        <a href="https://ai-fund.vc/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">AI Fund</h3>
+                            <span class="card__domain">ai-fund.vc</span>
+                        </a>
+
+                        <a href="https://firstpartycapital.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">First Party Capital</h3>
+                            <span class="card__domain">firstpartycapital.com</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Entrepreneuring (current projects) -->
+                <section class="section">
+                    <h2 class="section__title">Entrepreneuring (current projects)</h2>
+                    <div class="cards">
+                        <a href="https://hypd.ai/" class="card card--large" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">HYPD.ai - AI for Performance Marketers</h3>
+                            <span class="card__domain">hypd.ai</span>
+                        </a>
+
+                        <a href="https://noahpretzels.com/" class="card card--large" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Noah Pretzels</h3>
+                            <span class="card__domain">noahpretzels.com</span>
+                        </a>
+
+                        <a href="https://theturingmarketer.substack.com/" class="card card--medium" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">The Turing Marketer | Substack</h3>
+                            <span class="card__domain">theturingmarketer.substack.com</span>
+                        </a>
+
+                        <a href="https://adcontextprotocol.org/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">AdCP - Open Standard for Advertising</h3>
+                            <span class="card__domain">adcontextprotocol.org</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Blogging, Marketing, Developing -->
+                <section class="section">
+                    <h2 class="section__title">Blogging, Marketing, Developing</h2>
+                    <div class="cards">
+                        <a href="https://twitter.com/weeb0" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Twitter</h3>
+                            <span class="card__domain">@weeb0</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/ionutciobotaru/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">LinkedIn</h3>
+                            <span class="card__domain">linkedin.com/in/ionutciobotaru</span>
+                        </a>
+
+                        <a href="https://weeb0.medium.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Medium</h3>
+                            <span class="card__domain">weeb0.medium.com</span>
+                        </a>
+
+                        <a href="https://replit.com/@cionut" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Replit</h3>
+                            <span class="card__domain">replit.com/@cionut</span>
+                        </a>
+
+                        <a href="https://github.com/ionut85" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">GitHub</h3>
+                            <span class="card__domain">github.com/ionut85</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/cionut/?hl=en" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Instagram</h3>
+                            <span class="card__domain">instagram.com/cionut</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Past Projects -->
+                <section class="section">
+                    <h2 class="section__title">Past Projects</h2>
+                    <div class="cards">
+                        <a href="http://pubnative.net" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">PubNative</h3>
+                            <span class="card__domain">pubnative.net</span>
+                        </a>
+
+                        <a href="http://verve.com" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Verve</h3>
+                            <span class="card__domain">verve.com</span>
+                        </a>
+
+                        <a href="http://applift.com" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Applift</h3>
+                            <span class="card__domain">applift.com</span>
+                        </a>
+
+                        <a href="https://mgi-se.com/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">MGI</h3>
+                            <span class="card__domain">mgi-se.com</span>
+                        </a>
+
+                        <a href="http://inspectorgadget.ro" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Inspector Gadget</h3>
+                            <span class="card__domain">inspectorgadget.ro</span>
+                        </a>
+
+                        <a href="https://www.it-genetics.ro/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">IT Genetics</h3>
+                            <span class="card__domain">it-genetics.ro</span>
+                        </a>
+
+                        <a href="https://www.itgstore.ro/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">ITG Store</h3>
+                            <span class="card__domain">itgstore.ro</span>
+                        </a>
+
+                        <a href="https://www.f6s.com/company/bettahub" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Bettahub</h3>
+                            <span class="card__domain">f6s.com</span>
+                        </a>
+
+                        <a href="http://gave.ro" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Gave.ro</h3>
+                            <span class="card__domain">gave.ro</span>
+                        </a>
+
+                        <a href="http://superpantofi.ro" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Super Pantofi</h3>
+                            <span class="card__domain">superpantofi.ro</span>
+                        </a>
+
+                        <a href="http://www.monetariastatului.ro/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Monetaria Statului</h3>
+                            <span class="card__domain">monetariastatului.ro</span>
+                        </a>
+
+                        <a href="https://windowspc.ro/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">Windows PC Romania</h3>
+                            <span class="card__domain">windowspc.ro</span>
+                        </a>
+
+                        <a href="https://indiegrow.dev/" class="card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="card__title">IndieGrow</h3>
+                            <span class="card__domain">indiegrow.dev</span>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>Built with care in Berlin • Last updated December 2025</p>
+        </footer>
+    </div>
+</body>
+</html>

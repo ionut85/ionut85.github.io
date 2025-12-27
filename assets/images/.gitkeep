@@ -1,0 +1,8 @@
+# Image Assets Directory
+
+Add your images here:
+- profile.jpg (your profile photo)
+- Card preview images from your Bento page
+- Company/service icons
+
+The index.html will use fallback icons if images are not found.
