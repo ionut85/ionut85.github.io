@@ -13,37 +13,28 @@ A static, Bento-style personal link page built as a self-hosted alternative to B
 ├── index.html              # Main page (single-file, inline CSS)
 ├── links.json              # Source data for all links and sections
 ├── assets/
-│   └── images/             # All downloaded images (86 total, 7.2MB)
-│       ├── image_001.png through image_086.png
-│       └── profile.jpg     # ⚠️ ADD YOUR PROFILE PHOTO HERE
+│   └── images/             # All downloaded images (139 total, 12MB)
+│       ├── Properly named icons, previews, and screenshots
+│       └── profile.jpg     # Profile photo (used as favicon)
 ├── bento_source.html       # Original Bento page HTML (for reference)
 ├── urls.txt                # Organized list of all URLs by section
+├── CLAUDE.md               # Claude Code guidance document
+├── DEVELOPMENT_LOG.md      # Complete development history
 └── README.md               # This file
 ```
 
 ## ✅ What's Complete
 
-- ✅ **86 images downloaded** from original Bento page (7.2MB total)
-- ✅ **Responsive HTML/CSS** with mobile-first design
-- ✅ **Complete links.json** with all URLs from your Bento page
+- ✅ **139 images** properly named and organized (12MB total)
+- ✅ **Fixed-dimension Bento-style cards** that reflow beautifully
+- ✅ **Profile photo** added as favicon and avatar
+- ✅ **Complete image remapping** from generic names to descriptive filenames
 - ✅ **6 sections:** Entrepreneuring, Blogging, Media, Events, Investments, Past Projects
-- ✅ **Graceful fallbacks** for missing images (icons hide, text remains)
+- ✅ **49 link cards** with proper icons and preview images
+- ✅ **Centered responsive layout** across all screen sizes
 - ✅ **Fast loading** with lazy image loading
 - ✅ **Accessible** with semantic HTML and proper alt tags
-
-## ⚠️ TODO: Add Your Profile Photo
-
-The site currently shows "IC" initials as a fallback. To add your profile photo:
-
-```bash
-# Copy your profile photo to the assets folder:
-cp /path/to/your/photo.jpg assets/images/profile.jpg
-```
-
-Your profile photo should be:
-- Square aspect ratio (e.g., 400x400px or 800x800px)
-- JPG or PNG format
-- Under 500KB for fast loading
+- ✅ **Complete documentation** (CLAUDE.md and DEVELOPMENT_LOG.md)
 
 ## 🔧 How to Update Links
 
@@ -212,13 +203,6 @@ Then update references in `index.html` accordingly.
 - **Responsive Grid:** CSS Grid with mobile-first breakpoints
 - **Image fallbacks:** `onerror` handlers hide broken images
 - **Accessibility:** Semantic HTML, proper heading structure, adequate contrast
-
-## 📝 Maintenance Schedule
-
-- **Weekly:** Review analytics (if you add them)
-- **Monthly:** Check for broken links
-- **Quarterly:** Update bio, add new projects
-- **Before Bento shutdown (Feb 13):** Download any remaining images!
 
 ## 🆘 Troubleshooting
 
